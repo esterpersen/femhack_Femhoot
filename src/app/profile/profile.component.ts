@@ -14,8 +14,8 @@ export class ProfileComponent implements OnInit {
   updatedUser: User = this.gameService.user;
 
   ngOnInit(): void {
-    this.updatedUser.username = this.gameService.user.username;
-    console.log("updatedUserName: ",this.updatedUser.username);
+    this.updatedUser.username = this.gameService.getNewUser_localStorage().username;
+    
     this.updatedUser.gamePoints = this.gameService.user.gamePoints;
   }
   

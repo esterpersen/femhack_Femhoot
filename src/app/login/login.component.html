@@ -1,38 +1,45 @@
-<nav class="navbar navbar-light bg-light">
-	<div class="container-fluid">
-		<span class="navbar-brand mb-0 h1">Femhoot</span>
-	</div>
-</nav>
 <section class="login">
-	<h1 class="login-title">FEMHOOT !</h1>
-	<div class="login-card">
-
-		<form class="form" [formGroup]="loginForm">
-
-			<div class="mb-3">
-				<input type="text" class="form-control" id="loginUsername" placeholder="User Name" name="loginUsername"
-					autocomplete="off" formControlName="loginUsername" />
-				<div *ngIf="loginForm.controls['loginUsername'].invalid && (loginForm.controls['loginUsername'].dirty || loginForm.controls['loginUsername'].touched)"
-					class="alert alert-danger">
-					<div *ngIf="loginForm.controls['loginUsername'].errors?.['required']">User name required.</div>
-				</div>
+	<h1 class="login-title">FEMHOOT!</h1>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col text-center">
+				<p>Please login to play a game and learn fun & interesting facts about amazing women in tech.</p>
+				<p>There are 10 questions. For each correct question you get <b>10 points</b>.</p>
+				<p>Once logged in, press the <b>Get A Question</b> button to get a new question.</p>
+				<p>(At the moment you can insert any PIN).</p>
+				<p><b>LOG IN AND START LEARNING WHILE HAVING FUN!</b></p>
 			</div>
-
-			<div class="mb-3">
-				<input type="number" class="form-control" id="loginGameNumber" placeholder="Game PIN"
-					name="loginGameNumber" autocomplete="off" formControlName="loginGameNumber" min="0">
-				<div *ngIf="loginForm.controls['loginGameNumber'].invalid && (loginForm.controls['loginGameNumber'].dirty || loginForm.controls['loginGameNumber'].touched)"
-					class="alert alert-danger">
-					<div *ngIf="loginForm.controls['loginGameNumber'].errors?.['required']">Game PIN required.</div>
-				</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="login-card">
+				<form class="form" [formGroup]="loginForm">
+					<div class="mb-3">
+						<input type="text" class="form-control" id="loginUsername" placeholder="User Name"
+							name="loginUsername" autocomplete="off" formControlName="loginUsername" />
+						<div *ngIf="loginForm.controls['loginUsername'].invalid && (loginForm.controls['loginUsername'].dirty || loginForm.controls['loginUsername'].touched)"
+							class="alert alert-danger">
+							<div *ngIf="loginForm.controls['loginUsername'].errors?.['required']">User name required.
+							</div>
+						</div>
+					</div>
+					<div class="mb-3">
+						<input type="number" class="form-control" id="loginGameNumber" placeholder="Game PIN"
+							name="loginGameNumber" autocomplete="off" formControlName="loginGameNumber" min="0">
+						<div *ngIf="loginForm.controls['loginGameNumber'].invalid && (loginForm.controls['loginGameNumber'].dirty || loginForm.controls['loginGameNumber'].touched)"
+							class="alert alert-danger">
+							<div *ngIf="loginForm.controls['loginGameNumber'].errors?.['required']">Game PIN required.
+							</div>
+						</div>
+					</div>
+					<div class="d-grid gap-2">
+						<button type="submit" routerLink="/game" class="btn btn-info btn-login"
+							(click)="updateUser(); reset(loginForm)" [disabled]="!loginForm.valid"> Login</button>
+					</div>
+				</form>
 			</div>
-
-			<div class="d-grid gap-2">
-				<button type="submit" routerLink="/game" class="btn btn-info btn-login" (click)="updateUser(); reset(loginForm)"
-					[disabled]="!loginForm.valid"> Login</button>
-			</div>
-
-		</form>
-
+		</div>
 	</div>
 </section>

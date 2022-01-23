@@ -1,20 +1,17 @@
 <section class="question-page">
-	<h1>Welcome to the Femhoot game!</h1>
+	<h1 class="pb-5">Welcome to the Femhoot game!</h1>
 	<div class="container">
 		<div class="row">
 			<div class="col">
-
 				<button type="button" class="btn btn-lg btn-request-question" (click)="getAQuestion()" id="getAQuestionBtn">
 					Get a question
 				</button>
 			</div>
-
 			<div class="col">
 				<app-profile></app-profile>
 			</div>
 		</div>
-
-		<div class="row">
+		<div class="row pt-2">
 			<section class="question">
 				<app-question *ngIf="showComponent" [questionReceived]="questionToSend"></app-question>
 			</section>

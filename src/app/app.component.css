@@ -1,0 +1,17 @@
+.navbar {
+  color: white;
+  background-color: #1d1e2b;
+}
+
+.navbar-brand {
+  font-weight: 200;
+}
+
+img {
+  height: 68px;
+}
+
+span,
+img {
+  cursor: pointer;
+}

@@ -10,21 +10,22 @@ import { Component, Input, OnInit } from '@angular/core';
 export class QuestionComponent implements OnInit {
 
   @Input() questionReceived !: Question;
-  pointsAdded: boolean = false;
-  
-  constructor(private gameService: GameService) { }
+
+  constructor(public gameService: GameService) { }
 
   ngOnInit(): void {
+    //* CODE TO DEVELOP IN THE FUTURE: GET THE ANSWERS TO SHOW IN A RANDOM ORDER
+    //this.gameService.disorderAnswerList(this.questionReceived); 
   }
 
   checkAnswer(resp: any) {
-    console.log(resp);
-    if (!this.pointsAdded) {
+    if (!this.gameService.pointsAdded) {
       if (this.questionReceived.answers.correctAnswer == resp) {
         this.gameService.user.gamePoints += 10;
-        console.log(this.gameService.user.gamePoints);
-        this.pointsAdded = true;
+        this.gameService.pointsAdded = true;
+        this.gameService.isClicked = true;
       }
+      this.gameService.isClicked = true;
     }
   }
 

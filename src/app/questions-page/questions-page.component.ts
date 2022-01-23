@@ -13,10 +13,10 @@ export class QuestionsPageComponent implements OnInit {
     id: 68,
     question: "who is the smartest in the class?",
     answers : {
-      correctAnswer: "Sara",
+      correctAnswer: "Sara R.",
       incorrectAnswer1: "Ester",
-      incorrectAnswer2: "Xavi",
-      incorrectAnswer3: "Montagut",
+      incorrectAnswer2: "Justine",
+      incorrectAnswer3: "Sara M.",
     }
   }
   showComponent: boolean = false;
@@ -27,11 +27,10 @@ export class QuestionsPageComponent implements OnInit {
   }
 
   getAQuestion(){
-    console.log("I want to get a question!");
     this.questionToSend = this.gameService.getSingleQuestion();
     this.showComponent = true;
+    this.gameService.pointsAdded = false;
+    this.gameService.isClicked = false;
   }
-
-
 
 }

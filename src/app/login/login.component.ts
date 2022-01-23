@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   updateUser(){
     let newUserName: string = this.loginForm.value.loginUsername;
-    console.log("newUserName: ",newUserName);
+    this.gameService.user.gamePoints = 0;
     this.gameService.updateUser(newUserName);
   }
 

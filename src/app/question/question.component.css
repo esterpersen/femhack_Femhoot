@@ -2,12 +2,15 @@
   font-weight: 700;
   font-size: 30px;
   color: #4a4a4a;
+  padding-bottom: 20px;
 }
 
 .answer {
   cursor: pointer;
   color: white;
   font-size: 20px;
+  height: 100px;
+  margin-bottom: 10px;
 }
 
 .red {
@@ -24,4 +27,9 @@
 }
 .grey {
   background-color: grey;
+}
+
+
+button {
+  width: 100%;
 }

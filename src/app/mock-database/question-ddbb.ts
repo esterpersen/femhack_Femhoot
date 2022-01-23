@@ -2,8 +2,8 @@ import { Question } from '../interfaces/question';
 
 export const QuestionDDBB: Question[] = [
 	{
-		id: 1, question: "Who was the Google's first female engineer?", answers: {
-			correctAnswer: "Marissa Maye", incorrectAnswer1: "Ruchi Sanghvi", incorrectAnswer2: "Jenny Leee", incorrectAnswer3: "Ester PerellÃ³"
+		id: 1, question: "Who was Google's first female engineer?", answers: {
+			correctAnswer: "Marissa Maye", incorrectAnswer1: "Ruchi Sanghvi", incorrectAnswer2: "Jenny Leee", incorrectAnswer3: "Ester Perello"
 		}
 	},
 	{
@@ -45,7 +45,7 @@ export const QuestionDDBB: Question[] = [
 		}
 	},
 	{
-		id: 10, question: "Who is going to win the nuwe femhack frontend group challenge?", answers: {
+		id: 10, question: "Who is going to win the nuwe Femhack Frontend Group Challenge?", answers: {
 			correctAnswer: "Team 12", incorrectAnswer1: "Team 12", incorrectAnswer2: "Team 12", incorrectAnswer3: "Team 12"
 		}
 	},
