@@ -1,0 +1,125 @@
+{
+	"questions": [{
+			"id": "01",
+			"Question": "Who was the Google's first female engineer? ",
+			"Answers": [{
+					"Answer": "Marissa Maye"
+				},
+				{
+					"Answer": "Ruchi Sanghvi"
+				},
+				{
+					"Answer": "Jenny Leee"
+				},
+				{
+					"Answer": "Ester Perelló"
+				}
+			]
+		},
+		{
+			"id": "02",
+			"Question": "According to Staista, how many female employees tech jobs worked  at Facebook, Google and Apple in 2020? ",
+			"Answers": [{
+					"Answer": "23%"
+				},
+				{
+					"Answer": "34%"
+				},
+				{
+					"Answer": "10%"
+				},
+				{
+					"Answer": "12%"
+				}
+			]
+		},
+		{
+			"id": "03",
+			"Question": "Can you guess the percentage of tech startups that have at least one woman on the board of directors? ",
+			"Answers": [{
+					"Answer": "37%"
+				},
+				{
+					"Answer": "54%"
+				},
+				{
+					"Answer": "10%"
+				},
+				{
+					"Answer": "22%"
+				}
+			]
+		},
+		{
+			"id": "04",
+			"Question": "Which startup runs the first international online hackathon for women programmers? ",
+			"Answers": [{
+					"Answer": "Nuwe"
+				},
+				{
+					"Answer": "Mighty Networks"
+				},
+				{
+					"Answer": "Wompreneur"
+				},
+				{
+					"Answer": "Cisco"
+				}
+			]
+		},
+		{
+			"id": "05",
+			"Question": "Who is the only foreign lady tech CEO in India? ",
+			"Answers": [{
+					"Answer": "Valerie Wagoner"
+				},
+				{
+					"Answer": "Jenny Lee"
+				},
+				{
+					"Answer": "Justine Collache"
+				},
+				{
+					"Answer": "Janice Bryant Howroyd"
+				}
+			]
+		},
+		{
+			"id": "06",
+			"Question": "What's the percentage of tech startups across the world are founded by women ? ",
+			"Answers": [{
+					"Answer": "20%"
+				},
+				{
+					"Answer": "3%"
+				},
+				{
+					"Answer": "60%"
+				},
+				{
+					"Answer": "15%"
+				}
+			]
+		},
+		{
+			"id": "07",
+			"Question": "Who was one of the original programmers for the ENIAC computer? ",
+			"Answers": [{
+					"Answer": "Jean Jennings Bartik"
+				},
+				{
+					"Answer": "Stephanie Hannon"
+				},
+				{
+					"Answer": "Sara Righetti"
+				},
+				{
+					"Answer": "Elizabeth Holmes"
+				}
+			]
+		}
+	]
+}
+
+    
+   
