@@ -19,3 +19,8 @@ h1 {
 .btn-request-question:hover {
   color: rgb(140, 68, 168);
 }
+
+.question-page-title {
+  margin: 20px;
+  padding: 30px;
+}

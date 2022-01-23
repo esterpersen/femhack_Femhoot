@@ -1,3 +1,5 @@
+import { QuestionDDBB } from '../mock-database/question-ddbb';
+import { Question } from './../interfaces/question';
 import { Injectable } from '@angular/core';
 import { User } from '../interfaces/user';
 
@@ -8,11 +10,15 @@ export class GameService {
 
   constructor() { }
 
+  public questionsDDBB: Question[] = QuestionDDBB;
+
   public user: User =
     {
-      username : "",
-      gamePoints : 0
+      username: "",
+      gamePoints: 0
     }
+  public currentQuestion!: Question;
+  public currentQuestionId: number = 0;
 
   updateUser(newUser: string): string {
     this.user.username = newUser;
@@ -27,33 +33,37 @@ export class GameService {
     return JSON.parse(localStorage.getItem("New User")!);
   }
 
+  getSingleQuestion(): Question {
+    this.currentQuestion = this.questionsDDBB[this.currentQuestionId];
+    this.currentQuestionId++;
+    return this.currentQuestion;
 
-// JAVASCRIPT FOR QUESTION PAGE + QUESTION
-// const btnRequestQuestion = document.querySelector(".btn-request-question");
-// btnRequestQuestion.addEventListener("click", getAQuestion);
+  }
 
-// const question = document.querySelector(".question");
+  disorderAnswerList(question: Question) {
+    let answerListOrdered = question.answers;
 
-// let answer = null;
+  }
 
-// function getAQuestion() {
-//   question.innerHTML = CREATED IN THE QUESTION.HTML
-//                 
-//   answer = document.querySelector(".answer");
-//   answer.addEventListener("click", checkAnswer);
-// }
+  //   answerListOrdered = [
+  //     "Ada Lovelace",
+  //     "Charles Babbage",
+  //     "Konrad Zuse",
+  //     "Fran Bilas",
+  //   ];
+  //   answerListDisordered = [];
 
-// const point = document.querySelector(".point");
+  //   giveRandomAnswer() {
+  //     let randomIndex = Math.floor(Math.random() * this.answerListOrdered.length); //generate random index
+  //     let randomAnswer = this.answerListOrdered[randomIndex]; //select the answer associate to this index
+  //     this.answerListDisordered.push(randomAnswer); //add the random answer to the new array
+  //     this.answerListOrdered = this.answerListOrdered.filter(function (item) {
+  //       return item !== randomAnswer; //update answer list to remove the selected item
+  //     });
+  //   }
 
-// function checkAnswer(event) {
-//   let answer = event.target.id;
-//   let correctAnswer = "answer1";
-//   let pointsNumber = 0;
-//   console.log(answer);
-//   if (answer === correctAnswer) {
-//     pointsNumber += 10;
-//     point.innerHTML = <p class="card-text point">SCORE : ${pointsNumber} points</p>;
-//   }
-// }
+  //   for(let i = 0; i < 4; i++) {
+  //   giveRandomAnswer();
+  // }
 
 }

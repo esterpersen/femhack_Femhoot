@@ -1,3 +1,4 @@
+import { GameService } from './../services/game.service';
 import { Question } from './../interfaces/question';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -9,15 +10,22 @@ import { Component, Input, OnInit } from '@angular/core';
 export class QuestionComponent implements OnInit {
 
   @Input() questionReceived !: Question;
-  constructor() { }
+  pointsAdded: boolean = false;
+  
+  constructor(private gameService: GameService) { }
 
   ngOnInit(): void {
-
-
   }
 
-  checkAnswer(){
-
+  checkAnswer(resp: any) {
+    console.log(resp);
+    if (!this.pointsAdded) {
+      if (this.questionReceived.answers.correctAnswer == resp) {
+        this.gameService.user.gamePoints += 10;
+        console.log(this.gameService.user.gamePoints);
+        this.pointsAdded = true;
+      }
+    }
   }
 
 }

@@ -6,23 +6,23 @@
 					<div class="p-3 border bg-light">{{questionReceived.question }}</div>
 				</div>
 				<div class="col-6 answer red">
-					<button type="button" id="answer1" class="btn btn-lg btn-block answer red">
+					<button type="button" id="answer1" class="btn btn-lg btn-block answer red" (click)="checkAnswer(questionReceived.answers.correctAnswer)">
 						{{questionReceived.answers.correctAnswer }}
 					</button>
 				</div>
 				<div class="col-6 answer blue">
-					<button type="button" id="answer2" class="btn btn-lg btn-block answer blue" (click)="checkAnswer()">
+					<button type="button" id="answer2" class="btn btn-lg btn-block answer blue" (click)="checkAnswer(questionReceived.answers.incorrectAnswer1)">
 						{{questionReceived.answers.incorrectAnswer1 }}
 					</button>
 				</div>
 				<div class="col-6 answer yellow">
-					<button type="button" id="answer3" class="btn btn-lg btn-block answer yellow">
+					<button type="button" id="answer3" class="btn btn-lg btn-block answer yellow" (click)="checkAnswer(questionReceived.answers.incorrectAnswer2)">
 						{{questionReceived.answers.incorrectAnswer2 }}
 
 					</button>
 				</div>
 				<div class="col-6 answer purple">
-					<button type="button" id="answer4" class="btn btn-lg btn-block answer purple">
+					<button type="button" id="answer4" class="btn btn-lg btn-block answer purple" (click)="checkAnswer(questionReceived.answers.incorrectAnswer3)">
 						{{questionReceived.answers.incorrectAnswer3 }}
 
 					</button>

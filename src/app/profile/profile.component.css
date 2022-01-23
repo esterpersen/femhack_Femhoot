@@ -1,0 +1,11 @@
+.user-profile {
+  color: #4a4a4a;
+  text-align: left;
+  width: 400px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+}
+
+.points {
+  font-size: 40px;
+  font-family: "Bebas Neue", cursive;
+}
