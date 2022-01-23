@@ -1,0 +1,26 @@
+.question-title {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.answer {
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}
+
+.red {
+  background-color: #dc1d4b;
+}
+.blue {
+  background-color: #2276bc;
+}
+.yellow {
+  background-color: #ffbe52;
+}
+.purple {
+  background-color: #45168d;
+}
+.grey {
+  background-color: grey;
+}

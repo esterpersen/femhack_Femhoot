@@ -1,1 +1,33 @@
-<p>question works!</p>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="row g-2">
+				<div class="col-12 question-title">
+					<div class="p-3 border bg-light">{{questionReceived.question }}</div>
+				</div>
+				<div class="col-6 answer red">
+					<button type="button" id="answer1" class="btn btn-lg btn-block answer red">
+						{{questionReceived.answers.correctAnswer }}
+					</button>
+				</div>
+				<div class="col-6 answer blue">
+					<button type="button" id="answer2" class="btn btn-lg btn-block answer blue" (click)="checkAnswer()">
+						{{questionReceived.answers.incorrectAnswer1 }}
+					</button>
+				</div>
+				<div class="col-6 answer yellow">
+					<button type="button" id="answer3" class="btn btn-lg btn-block answer yellow">
+						{{questionReceived.answers.incorrectAnswer2 }}
+
+					</button>
+				</div>
+				<div class="col-6 answer purple">
+					<button type="button" id="answer4" class="btn btn-lg btn-block answer purple">
+						{{questionReceived.answers.incorrectAnswer3 }}
+
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

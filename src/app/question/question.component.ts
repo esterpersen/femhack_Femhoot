@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Question } from './../interfaces/question';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-question',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionComponent implements OnInit {
 
+  @Input() questionReceived !: Question;
   constructor() { }
 
   ngOnInit(): void {
+
+
+  }
+
+  checkAnswer(){
+
   }
 
 }

@@ -1,0 +1,21 @@
+section {
+  margin: 20px;
+}
+
+h1 {
+  font-family: "Mochiy Pop P One", sans-serif;
+  color: #45178d;
+}
+
+.question-page {
+  text-align: center;
+}
+
+.btn-request-question {
+  margin: 40px;
+  background-color: #45178d;
+  color: white;
+}
+.btn-request-question:hover {
+  color: rgb(140, 68, 168);
+}
