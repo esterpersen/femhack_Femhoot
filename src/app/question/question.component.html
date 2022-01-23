@@ -5,26 +5,26 @@
 				<div class="col-12 question-title">
 					<div class="p-3 border bg-light">{{questionReceived.question }}</div>
 				</div>
-				<div class="col-6 answer red" [ngStyle]="{'background-color':this.gameService.isClicked == true ? 'darkgreen' : '#dc1d4b' }">
+				<div class="col-6 answer red" [ngStyle]="{'background-color':this.gameService.isClicked == true ? '#569651' : '#dc1d4b' }">
 					<button type="button" id="answer1" class="btn btn-lg btn-block answer"
 						(click)="checkAnswer(questionReceived.answers.correctAnswer)">
 						{{questionReceived.answers.correctAnswer }}
 					</button>
 				</div>
-				<div class="col-6 answer blue" [ngStyle]="{'background-color':this.gameService.isClicked == true ? 'darkred' : '#2276bc' }">
+				<div class="col-6 answer blue" [ngStyle]="{'background-color':this.gameService.isClicked == true ? '#a01537' : '#2276bc' }">
 					<button type="button" id="answer2" class="btn btn-lg btn-block answer"
 						(click)="checkAnswer(questionReceived.answers.incorrectAnswer1)">
 						{{questionReceived.answers.incorrectAnswer1 }}
 					</button>
 				</div>
-				<div class="col-6 answer yellow" [ngStyle]="{'background-color':this.gameService.isClicked == true ? 'darkred' : '#ffbe52' }">
+				<div class="col-6 answer yellow" [ngStyle]="{'background-color':this.gameService.isClicked == true ? '#a01537' : '#ffbe52' }">
 					<button type="button" id="answer3" class="btn btn-lg btn-block answer"
 						(click)="checkAnswer(questionReceived.answers.incorrectAnswer2)">
 						{{questionReceived.answers.incorrectAnswer2 }}
 
 					</button>
 				</div>
-				<div class="col-6 answer purple" [ngStyle]="{'background-color':this.gameService.isClicked == true ? 'darkred' : '#45168d' }">
+				<div class="col-6 answer purple" [ngStyle]="{'background-color':this.gameService.isClicked == true ? '#a01537' : '#45168d' }">
 					<button type="button" id="answer4" class="btn btn-lg btn-block answer"
 						(click)="checkAnswer(questionReceived.answers.incorrectAnswer3)">
 						{{questionReceived.answers.incorrectAnswer3 }}
